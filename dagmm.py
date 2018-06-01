@@ -51,7 +51,7 @@ class DAGMM(object):
 			activation=tf.tanh,
 		)
 		self.z_c = tf.layers.dense(
-			inputs=encoder_1,
+			inputs=encoder_2,
 			units=1,
 			activation=None,
 		)
@@ -66,7 +66,7 @@ class DAGMM(object):
 			activation=tf.tanh,
 		)
 		self.recon = tf.layers.dense(
-			inputs=decoder_1,
+			inputs=decoder_2,
 			units=self.input_dim,
 			activation=None,
 		)
